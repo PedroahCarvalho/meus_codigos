@@ -1,0 +1,33 @@
+body {
+    background: #efefef ;
+    overflow-x: hidden ;
+}
+header{
+    border: 2px solid #000;
+    display: inline-block;
+    width: 100%;
+}
+Footer{
+    border: 2px solid #000;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.img{
+    float: left;
+    width: 50px; 
+}
+.center{
+    position: relative;
+    left: 20%;
+    top: 35%;
+}
+.centro{
+    position: relative;
+    left: 20%;
+    top: 30%;
+}
+img{
+    width: 200px;
+    float: left;
+}
