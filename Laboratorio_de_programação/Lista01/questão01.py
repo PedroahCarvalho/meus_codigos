@@ -6,5 +6,6 @@ temp = float(input('Digite quanto tempo gasto no percursso: '))
 #processamento 
 vel_media = (km_rodados  / temp)
 
+print('*'*120)
 #saida
 print(f'Sua velocida media nessa viagem sera de {vel_media} Km/h.')
