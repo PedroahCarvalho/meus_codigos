@@ -1,0 +1,34 @@
+header #topo {
+    display: flex;
+    align-items: center;
+    background-color: #ddd;
+}
+header h1 {
+    width:  100%;
+    padding: 31.2px;
+}
+nav {
+    background-color: #00adef;
+    padding: 10px;
+}
+nav a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+nav a:hover {
+    color: white;
+    background-color: #4571b0;
+}
+main {
+    background-color: #eee;
+    color: #0000ff;
+}
+footer { 
+    background-color: #ddd;
+    padding:  2px;
+}
+header p {
+    text-align: center;
+    
+}
