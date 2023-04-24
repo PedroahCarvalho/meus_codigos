@@ -30,5 +30,9 @@ footer {
 }
 header p {
     text-align: center;
-    
+
+}
+img{
+    left: 45px;
+    right: 45px;
 }
