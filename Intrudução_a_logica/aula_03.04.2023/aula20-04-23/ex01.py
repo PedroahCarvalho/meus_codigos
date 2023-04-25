@@ -16,6 +16,13 @@ for a in vetorPossibilidade:
 
         print(f'A = {a} \t b = {b} \t H ={resultadoF}')
         linhas+=1
+if true == 0:
+    print('esta formula e contraditoria')
+elif false == 0:
+    print('essa formula e tautologica')
+else:
+    print('Esta formula e satisfatoria')
+
 print(f'Total de linha com resultado VERDADEIRO: {true}')
 print(f'Total de linhas com resultado FALSO: {false}')
 print(f'Total de linha da tabela: {linhas}')
