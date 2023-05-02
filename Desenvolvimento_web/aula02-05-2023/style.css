@@ -22,3 +22,6 @@ figure figcaption{
 figure:hover figcaption{
     opacity: 1;
 }
+body{
+    background-image: url("imagens/fundo.png");
+}
