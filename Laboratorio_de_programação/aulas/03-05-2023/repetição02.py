@@ -16,7 +16,7 @@ while interador <= max(valor1, valor2): # a função (max) retorna o maior valor
     # e ' par, enquanto o resto de divisão por 2 e 0
     if interador%2 == 0:  # % e sinal que represendata a função (mod) que devoulve o resto da divisão.
         contador_pares += 1
-        print(f'{interador}par')
+        print(f'{interador} par')
     else:
         print(f'{interador} impar')
     interador = interador + 1 
