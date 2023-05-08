@@ -7,6 +7,8 @@ header{
     display: inline-block;
     background-color: chartreuse;
     text-align: center;
+    border-radius: 10px;
+    padding: 10px, 10px, 10px, 10px;
 }
 main{
     
@@ -21,6 +23,7 @@ main{
     display: inline-block;
     background-color: grey;
     text-align: center;
+    border-radius: 10px;
 }
 .bloco02 {
     width: 50%;
@@ -28,6 +31,33 @@ main{
     background-color: gray;
     display: inline-block;
     text-align: center;
+    border-radius: 10px;
 }
-.
+.bloco_inferior{
+    display: flex;
+}
+.bloco-b01{ 
+    width: 33.33%;
+    height: 500px;
+    background-color: gray;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+}
+.bloco-b02{ 
+    width: 33.33%;
+    height: 500px;
+    background-color: gray;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+}
+.bloco-b03{ 
+    width: 33.33%;
+    height: 500px;
+    background-color: gray;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+}
 
