@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    width: 100.00%;
+    height: 58px;
+    display: inline-block;
+    background-color: chartreuse;
+    text-align: center;
+}
+main{
+    
+
+}
+.bloco_superior{
+    display: flex;
+}
+.bloco01 {
+    width: 50%;
+    height: 500px;
+    display: inline-block;
+    background-color: grey;
+    text-align: center;
+}
+.bloco02 {
+    width: 50%;
+    height: 500px;
+    background-color: gray;
+    display: inline-block;
+    text-align: center;
+}
+.
+
