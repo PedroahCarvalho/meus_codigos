@@ -1,0 +1,19 @@
+#azul {
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    position: relative;
+}
+#vermelha {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    top: 0;
+    right: 0px;
+    position: absolute;
+}
+#amarela {
+    width: 100px;
+    height: 100px;
+    background-color:yellow ;
+}
