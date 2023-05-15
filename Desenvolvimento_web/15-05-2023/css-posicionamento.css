@@ -1,19 +1,26 @@
+body{
+    margin: 0px;
+}
 #azul {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 1400px;
     background-color: blue;
     position: relative;
 }
 #vermelha {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 1400px;
     background-color: red;
     top: 0;
     right: 0px;
     position: absolute;
 }
 #amarela {
-    width: 100px;
+    width: 300px;
     height: 100px;
     background-color:yellow ;
+    top: 0;
+    right: 0px;
+    position: absolute;
+    position: fixed;
 }
