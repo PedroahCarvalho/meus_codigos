@@ -30,7 +30,7 @@ header{
     cursor: pointer;
 }
 .bloco01 img{
-    width: 100%;
+    width: 85%;
     height: 300px;
     border-radius: 10px;
     border: none;
@@ -62,8 +62,9 @@ header{
     margin: 10px 2px 2px 2px;
 }
 .bloco-b01 img{
-    width: 100%;
+    width: 95%;
     height: 250px;
+    border-radius: 10px;
 }
 .bloco-b02{ 
     width: 33.33%;
@@ -75,8 +76,9 @@ header{
     margin: 10px 2px 2px 2px;
 }
 .bloco-b02 img{
-    width: 100%;
+    width: 95%;
     height: 250px;
+    border-radius: 10px;
 }
 .bloco-b03{ 
     width: 33.33%;
@@ -88,12 +90,14 @@ header{
     margin: 10px 2px 2px 2px;
 }
 .bloco-b03 img{
-    width: 100%;
+    width: 95%;
     height: 250px;
+    border-radius: 10px;
 }
 footer{
     text-align: center;
     width: 100%;
     height: 20px;
     background-color: grey;
+    margin: 0px;
 }
