@@ -4,22 +4,9 @@
 int main(){
     
     printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
+    scanf()
 
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-    printf("HELLO WORLD\n");
-
+    system("pause")
 
 }
 

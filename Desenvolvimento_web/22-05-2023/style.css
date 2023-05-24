@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    width: 30%;
+    border: 1px solid black;
+    margin: 0px auto;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th{
+    text-align: center;
+}
+.l2 {
+    background-color: blue;
+}
+.a1 {
+    background-color: red;
+}
+.b2{
+    background-color: yellow;
+}
+.l3{
+    background: green;
+}
+.l1{
+    background:blue;
+}
+.l2{
+    background:blue;
+}
+.l4{
+    background:blue;
+}
