@@ -3,11 +3,14 @@
 
 int main(){
     
-    printf("HELLO WORLD\n");
-    scanf()
+    printf("HELLO WORLD\n"); 
+    scanf();
 
-    system("pause")
+    system("pause");
 
+}
+void {
+    
 }
 
 
