@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+
+static void main(){
     
     printf("HELLO WORLD\n"); 
     scanf();
@@ -9,9 +10,7 @@ int main(){
     system("pause");
 
 }
-void {
-    
-}
+
 
 
 
