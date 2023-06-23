@@ -1,8 +1,6 @@
-console.log('ola mundo')
+//comentario para linhas
 /*
-console.log('ola mundo')
-console.log('ola mundo')
-console.log('ola mundo')
-console.log('ola mundo')
+comentario de bloco ctrl + shift + t . recupera janelas do navegador
 */
-//comentario linha 
+
+console.log("ola mundo");
