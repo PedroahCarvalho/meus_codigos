@@ -32,3 +32,4 @@ print(matriz9)
 m7 = matriz9 > 5
 print(m7)
 
+e
