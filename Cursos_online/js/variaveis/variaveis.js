@@ -5,7 +5,15 @@
 var ola_mundo="ola maundo!!!"
 console.log(ola_mundo)
 
+<<<<<<< HEAD:Cursos_online/js/variaveis.js
 function(){
     
 
 }
+=======
+function (){
+}
+
+
+
+>>>>>>> cdd1e03074bea6f8960fb499d31afaf94feac04a:Cursos_online/js/variaveis/variaveis.js
