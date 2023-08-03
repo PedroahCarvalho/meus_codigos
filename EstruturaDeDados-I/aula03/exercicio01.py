@@ -17,7 +17,7 @@ print("*"*30)
 for a in range(n_pessoas):
     nome = input('Digite um nome: ')
     lista.append(nome)
-    print(lista)
+    #print(lista)
 
 for boasVindas in lista:
     print(f'Boas vindas {boasVindas} !!!')
