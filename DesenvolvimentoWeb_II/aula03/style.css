@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+main{
+    display: flex;
+    justify-content: center;
+    
+}
+.blocoPrincipal{
+    width: 30%;
+    margin-top: 50px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+.letras{
+    color: blue;
+    margin-top: 10px;
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+}
