@@ -7,15 +7,13 @@
 main{
     display: flex;
     justify-content: center;
-    
 }
 .blocoPrincipal{
-    width: 30%;
+    width: 20%;
     margin-top: 50px;
-    border: solid 1px gray;
+    border: solid 1px rgb(199, 197, 197);
     border-radius: 10px;
     padding: 10px;
-    
 }
 .letras{
     color: blue;
