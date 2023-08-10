@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>funcão para manipulaçãp de elementos do DOM</title>
+    </head>
+    <body>
+        
+        <div id="valor">????</div>
+        <div onclick="evento()">Clique aqui</div>
+        <div onclick="eventoazul()">Clique aqui</div>
+
+        <script>
+            function eventoazul(){
+                document.getElementById("valor").style.background="blue";
+            }
+            function evento(){
+                var x = 20;
+                //altera o valor de uma tag.
+                document.getElementById("valor").innerHTML = x;
+                //altera a cor de fundo.
+                document.getElementById("valor").style.background="red";
+            }
+        </script>
+         
+    </body>
+</html>

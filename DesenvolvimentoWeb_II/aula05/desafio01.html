@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>desafio das cores</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="superior" id="respostaDeCor"></div><br><br>
+        <div class="cores">
+            <div class="bloco01" onclick="vermelha()"></div>
+            <div class="bloco02" onclick="amarela()" ></div>
+            <div class="bloco03" onclick="verde()"></div>
+            <div class="bloco04" onclick="azulClaro()"></div>
+            <div class="bloco05" onclick="preto()"></div>
+        </div>
+        <script>
+            function vermelha(){
+                document.getElementById("respostaDeCor").style.background="red";
+            }
+
+            function amarela(){
+                document.getElementById("respostaDeCor").style.background="yellow";
+            }
+
+            function verde(){
+                document.getElementById("respostaDeCor").style.background="green";
+            }
+
+            function azulClaro(){
+                document.getElementById("respostaDeCor").style.background="blue";
+            }
+
+            function preto(){
+                document.getElementById("respostaDeCor").style.background="black";
+            }
+        </script>
+    </body>
+</html>
