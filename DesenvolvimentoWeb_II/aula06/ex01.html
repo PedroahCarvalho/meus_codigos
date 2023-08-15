@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>input</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Exemplo de formulario</h1>
+        primeiro numero:
+        <input type="number" id="text1">
+        <br>
+        segundo numero:
+        <input type="number" id="text2">
+        <br>
+        <input type="button" value="ok" onclick="calcular()">
+        <input type="button" value="limpar" onclick="limpar()">
+        <br>
+        <div id="resp"></div>
+
+        <!-- atividade 01 -->
+
+        primeira notas
+        <input type="number" id="nota01">
+        <br>
+        segunda nota
+        <input type="number" id="nota02">
+        <br>
+        calculo de notas
+        <input type="button" value="calcular" onclick="media()">
+
+
+
+
+        <script>
+            function calcular(){
+
+                var text1 = document.getElementById("text1");
+                var text2 = document.getElementById("text2");
+                var resp = document.getElementById("resp"); // essa variavel esta recebendo o valor da função getElementById() que esta pegando o u valor do input atraves do html. 
+                //pega os valores digitados pelo usuario
+                var n1 = parseInt(text1.value);
+                var n2 = parseInt(text2.value); //parseInt() essa função muda o tipo do valor contido va variavel para numeros inteiro ou int.
+                //faz o calculo
+                var soma = n1+n2;
+                //exibe a resposta
+                resp.innerHTML= "soma: " + soma;
+            }
+            function limpar() {
+                text1.value = "";// value ele pega o valor da variavel ou ele muda a mes. no exmplo mostrado ele esta mudando o valor da variavel.
+                text2.value = "";
+                resp.innerHTML  = ""; //innerHTML muda o conteudo da <div>.
+                //coloca o foco no input
+                text1.focus();
+            }
+            1 - peça para o usuario digitar 2 notas. Calcule e mostre a media delas.
+            
+
+
+            2 - peça para o usuario digitar a largura e altura de um retangulo. Calule e mostre sua area (largura * altura)
+            3 - peça para o usuario digitar o nome de uma pessoa  e seu ano de nacimento. Mostre uma mensaguem semelhante a esta: "ola Fulano, voce tem 25 anos", sendo que FULANO foi o nome que o usuario digitou e 25 é a sua idade calculada        </script>
+    </body>
+</html>
