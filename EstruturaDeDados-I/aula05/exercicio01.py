@@ -43,3 +43,5 @@ for negativos in lista:
         somaDosNegativos = negativos + somaDosNegativos
 print(f"a soma dos negativos e de {somaDosNegativos}")
 print("*"*30)
+
+
