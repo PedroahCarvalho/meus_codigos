@@ -15,6 +15,7 @@
         <input type="button" value="limpar" onclick="limpar()">
         <br>
         <div id="resp"></div>
+        <br><br>
 
         <!-- atividade 01 -->
 
@@ -26,11 +27,13 @@
         <br>
         calculo de notas
         <input type="button" value="calcular" onclick="media()">
+        <div id="respostaUsuario01"></div>
 
 
 
 
         <script>
+
             function calcular(){
 
                 var text1 = document.getElementById("text1");
@@ -51,11 +54,22 @@
                 //coloca o foco no input
                 text1.focus();
             }
-            1 - peça para o usuario digitar 2 notas. Calcule e mostre a media delas.
-            
+            //1 - peça para o usuario digitar 2 notas. Calcule e mostre a media delas.
+            function media(){
+                nota01 = document.getElementById("nota01");
+                nota02 = document.getElementById("nota02");
+                resposta = document.getElementById("respostaUsuario01");
+                var nt01 = parseFloat(nota01.value);
+                var nt02 = parseFloat(nota02.value);
+                var media = (nt01+nt02)/2;
+                resposta.innerHTML = 'A media e de ' + media;
+
+            }
 
 
-            2 - peça para o usuario digitar a largura e altura de um retangulo. Calule e mostre sua area (largura * altura)
-            3 - peça para o usuario digitar o nome de uma pessoa  e seu ano de nacimento. Mostre uma mensaguem semelhante a esta: "ola Fulano, voce tem 25 anos", sendo que FULANO foi o nome que o usuario digitou e 25 é a sua idade calculada        </script>
+            // 2 - peça para o usuario digitar a largura e altura de um retangulo. Calule e mostre sua area (largura * altura)
+            //3 - peça para o usuario digitar o nome de uma pessoa  e seu ano de nacimento. Mostre uma mensaguem semelhante a esta: "ola Fulano, voce tem 25 anos", sendo que FULANO foi o nome que o usuario digitou e 25 é a sua idade calculada        
+        </script>
     </body>
+    
 </html>
