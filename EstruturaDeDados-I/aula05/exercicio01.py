@@ -5,14 +5,14 @@ guardar = lista[0]
 for maior in (lista):
     if maior > guardar:
         guardar=maior
-print(guardar)
+print(f"Ex01 - O maior elemento é {guardar}")
 print("*"*30)
 
 guardar1 = lista[0]
 for maior in (lista):
     if maior < guardar1:
         guardar1=maior
-print(guardar1)
+print(f"Ex02 - O menor elemento é {guardar1}")
 print("*"*30)
 
 #usar mod
