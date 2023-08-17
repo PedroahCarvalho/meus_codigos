@@ -28,9 +28,29 @@
         calculo de notas
         <input type="button" value="calcular" onclick="media()">
         <div id="respostaUsuario01"></div>
+        <br><br>
 
+        <!-- segundo exercios -->
+        <label for="altura">Digite a altura</label>
+        <input type="number" id="altura" name="altura">
+        <br>
+        <label for="largura">Digite a largura</label>
+        <input type="number" name="largura" id="largura">
+        <br>
+        <input type="button" value="calcular" onclick="calculoArea()">
+        <div id="resposta02"></div>
 
-
+        <!-- terceiro Exercicios -->
+        
+        <label for="userName">Digite seu Nome</label>
+        <input type="text" id="userName" name="userName">
+        <br>
+        <label for="idade">Digite sua idade</label>
+        <input type="number" id="idade" name="idade">
+        <br>
+        <input type="button" value="confimar" onclick="mesaguemIdade()">
+        <div id="resposta03"></div>
+        <br>
 
         <script>
 
@@ -54,6 +74,8 @@
                 //coloca o foco no input
                 text1.focus();
             }
+
+
             //1 - peça para o usuario digitar 2 notas. Calcule e mostre a media delas.
             function media(){
                 nota01 = document.getElementById("nota01");
@@ -68,7 +90,30 @@
 
 
             // 2 - peça para o usuario digitar a largura e altura de um retangulo. Calule e mostre sua area (largura * altura)
-            //3 - peça para o usuario digitar o nome de uma pessoa  e seu ano de nacimento. Mostre uma mensaguem semelhante a esta: "ola Fulano, voce tem 25 anos", sendo que FULANO foi o nome que o usuario digitou e 25 é a sua idade calculada        
+            function calculoArea(){
+
+                var alt = document.getElementById("altura");
+                var larg = document.getElementById("largura");
+                var resp = document.getElementById("resposta02");
+                var altC = parseFloat(alt.value);
+                var largC = parseFloat(larg.value);
+                var calArea = altC * largC;
+                resp.innerHTML= "A sua area e de " + calArea; 
+            }
+
+            //3 - peça para o usuario digitar o nome de uma pessoa  e seu ano de nacimento. Mostre uma mensaguem semelhante a esta: "ola Fulano, voce tem 25 anos", sendo que FULANO foi o nome que o usuario digitou e 25 é a sua idade calculada
+
+            function mesaguemIdade() {
+                var nome = document.getElementById("userName");
+                var idade = document.getElementById("idade");
+                var respoeta03 = document.getElementById("resposta03");
+                var name = nome.value;
+                var age = parseInt(idade.value);
+                var somaIdade = (2023 - age);
+                respoeta03.innerHTML = "ola " + name + ", voce tem " + somaIdade + " anos.";
+            }
+            
+            
         </script>
     </body>
     
