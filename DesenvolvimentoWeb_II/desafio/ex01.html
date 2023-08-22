@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Exercios javascript</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <div class="ex01">
+                <h1>programa para calculo de troco</h1>
+                <label for="ValorCompra">Valor da compra</label><br>
+                <input type="number" name="ValorCompra" id="valorCompra">
+                <br><br>
+
+                <label for="valorRecebido">Valor recebido</label><br>
+                <input type="number" name="valorRecebido" id="valorRecebido">
+                <br><br>
+                
+                <input type="button" value="calcular" onclick="CalculoTroco()">
+                <br><br>
+
+                <div id="resp01"></div>
+            </div>
+        </main>
+        
+
+        <script>
+            //1 - Deseja-se criar um sistema para calcular o valor de troco para um caixa de uma loja, ondeo usuário irá digitar o valor total da compra e o valor pago pelo cliente.
+
+        function CalculoTroco(){
+            var valor01 = document.getElementById("valorCompra");
+            var valor02 = document.getElementById("valorRecebido");
+            var respEx01 = document.getElementById("resp01");
+            var v01 = parseFloat(valor01.value);
+            var v02 = parseFloat(valor02.value);
+            var process = (v02 - v01);
+            respEx01.innerHTML = "valor do troco: R$ " + process.toFixed(2);
+
+
+        }
+        </script>
+    </body>
+</html>
