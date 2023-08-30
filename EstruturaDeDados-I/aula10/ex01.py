@@ -10,7 +10,7 @@ while opcao != 3:
     print("1 - Adicionar")
     print('2 - Consultar')
     print('3 - Sair')
-    opcao = input(">>>>")
+    opcao = input(">>>> ")
     if opcao == 1:
         codigo = input("codigo: ")
         nome = input('Nome do produto: ')
