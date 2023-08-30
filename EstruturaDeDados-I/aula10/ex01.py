@@ -19,6 +19,7 @@ while opcao != 3:
     elif opcao == 2:
         # vou informar o codigo e ele me retornar o nome
         codigo = input('Codigo desejado: ')
+        # verificar se chave esta no estoque 
         registro = estoque[codigo]
         print(f'REGISTRO RECUPERADO:  {registro}')
     elif opcao ==3:
