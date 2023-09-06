@@ -7,3 +7,4 @@ with open('EstruturaDeDados-I/beseDados/dados.json', 'r') as arquivo:
     registro = json.load(arquivo)
 
 print(registro)
+print(type(registro))
