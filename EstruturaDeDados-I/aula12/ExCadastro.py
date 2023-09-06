@@ -14,7 +14,7 @@ opcoes = 1
 try: #tratamento de Exeção "try" signfica tente ou seja ele vai tentar executar o bloco que tenta carregar o arquivo caso esse arquivo não exista ele vai para o except disendo  que o arquivo não existe, nesse caso e especifico.
     with open('EstruturaDeDados-I/beseDados/estoque.json', 'r') as arquivo:
         Banco_dados = json.load(arquivo)
-except:1
+except:
     print("o arquivo não existe")
 
 
