@@ -6,7 +6,7 @@ function calcular(){
     }else if(idade < 16){
         resp.innerHTML= "Não vota";
     }else{
-        resp.innerHTML= "voto facultativo";
+        resp.innerHTML= "Voto facultativo";
     }
     
 }
