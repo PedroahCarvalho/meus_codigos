@@ -1,28 +1,29 @@
+#bibliotecas 
 import json
 import os
 
+# funçoes
+def gravar(arc):
+    with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'a') as arquivo:
+        json.dump(arc, arquivo, indent=4)
+
+
+
+# Verificando, inciando ou carregando arquivos inportentes para o programa.
 banDados = {}
-if(os.path.exists('trabalhos/banco_dados.json')): # verificando se o arquivo existe.
-    print('Arquivos carregados.')
-    with open('trabalhos/banco_dados.json', 'r') as arquivo:
+if(os.path.exists('EstruturaDeDados-I/trabalhos/banco_dados.json')): # verificando se o arquivo existe.
+    with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'r') as arquivo:
         banDados = json.load(arquivo)
+    print("Banco de dados carregado.")
 else:
     print("Arquivo não existente")
-    print("criando arquivo....")
-    with open('trabalhos/banco_dados.json', 'w') as arquivo:
-        banDados = json.dump(arquivo)
+    print("criando arquivo...")
+    with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
+        json.dump(banDados, arquivo)
     print("Banco de Dados incido com Sucesso.")
 
 
-
-
-
-
-
-
-
-
-db = []
+#programa principal
 opcao = 1
 while opcao != 7:
     print('============Menu=================')
@@ -33,9 +34,8 @@ while opcao != 7:
     print("5 - Aplicar um acréscimo ou desconto em todos os produtos")
     print("6 - Excluir um registro de produto  ")
     print("7 - Sair do programa. ")
+    opcao = int(input('Digite opção: '))
 
-
-    opcao = input("opção>>> ") 
     if opcao == 1:
         codigo = input("Incira o codigo do produto: ")
         quantidade = input("Digite o nome do produto: ")
