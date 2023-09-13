@@ -9,24 +9,24 @@ def gravar(arc):
 
 
 
-# Verificando, inciando ou carregando arquivos inportentes para o programa.
+# Verificando, inciando ou carregando arquivos importentes para o programa.
 banDados = {}
 if(os.path.exists('EstruturaDeDados-I/trabalhos/banco_dados.json')): # verificando se o arquivo existe.
     with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'r') as arquivo:
         banDados = json.load(arquivo)
     print("Banco de dados carregado.")
 else:
-    print("Arquivo não existente")
-    print("criando arquivo...")
+    print("Banco de dados não encontrado.")
+    print("Iniciando banco de dados...")
     with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
         json.dump(banDados, arquivo)
-    print("Banco de Dados incido com Sucesso.")
+    print("Banco de Dados inicido com Sucesso.")
 
 
 #programa principal
 opcao = 1
 while opcao != 7:
-    print('============Menu=================')
+    print('========== MENU ==========')
     print("1 - Inserir um novo produto")
     print("2 - Consultar um produto por código")
     print("3 - Consultar todos os produtos")
@@ -37,6 +37,7 @@ while opcao != 7:
     opcao = int(input('Digite opção: '))
 
     if opcao == 1:
+        print("========== Caldastro de produtos ==========")
         codigo = input("Incira o codigo do produto: ")
         quantidade = input("Digite o nome do produto: ")
         preco = input("Digite o preço: ")
@@ -46,3 +47,6 @@ while opcao != 7:
         print("bloco 2. CONSULTA POR CODIGO")
     if opcao == 3: 
         print("Bloco 3. consultar todos os produtos")
+    else:
+        
+        print("ERRO, Opção invalida!")
