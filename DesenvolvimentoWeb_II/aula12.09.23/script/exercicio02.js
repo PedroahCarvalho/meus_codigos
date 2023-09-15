@@ -6,7 +6,7 @@ function calcular(){
     var nota01 = document.getElementById("nota01").value;
     var nota02 = document.getElementById("nota02").value;
     var resp = document.getElementById("resp");
-    var mediafinal = parseFloat(nota01 + nota02) /2;
+    var mediafinal = (nota01 + nota02)/2;
     if(mediafinal >= 70){
         resp.innerHTML = "Aluno aprovado";
     }else if(mediafinal >= 40){

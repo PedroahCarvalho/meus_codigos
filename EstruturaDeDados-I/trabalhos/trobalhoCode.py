@@ -10,16 +10,16 @@ def gravar(arc):
 
 
 # Verificando, inciando ou carregando arquivos importentes para o programa.
-banDados = {}
+bancoDados = {}
 if(os.path.exists('EstruturaDeDados-I/trabalhos/banco_dados.json')): # verificando se o arquivo existe.
     with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'r') as arquivo:
-        banDados = json.load(arquivo)
+        bancoDados = json.load(arquivo)
     print("Banco de dados carregado.")
 else:
     print("Banco de dados não encontrado.")
     print("Iniciando banco de dados...")
     with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
-        json.dump(banDados, arquivo)
+        json.dump(bancoDados, arquivo)
     print("Banco de Dados inicido com Sucesso.")
 
 
@@ -36,15 +36,37 @@ while opcao != 7:
     print("7 - Sair do programa. ")
     opcao = int(input('Digite opção: '))
 
+
+    #bloco para adiciação de novos produtos
+    tmp = {}
     if opcao == 1:
         print("========== Caldastro de produtos ==========")
         codigo = input("Incira o codigo do produto: ")
-        quantidade = input("Digite o nome do produto: ")
-        preco = input("Digite o preço: ")
-        #disponibilidade
-        dbtemp = { }
+        if codigo in bancoDados.keys():
+            print("Codigo ja existe ")
+        else:
+            nome = input("Digite o nome do produto: ")
+            quantidade = int(input("Digite a quantidade do produto: "))
+            preco = input("Digite o preço do produto: ")
+            disponibildade = False
+            if quantidade > 0:
+                disponibildade = True
+            else:
+                disponibildade = False
+
+            bancoDados[codigo] = {'nome': nome, 'quantidade':quantidade, 'preco': preco, 'disponibilidade': disponibildade}
+
+            with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
+                json.dump(bancoDados, arquivo, indent=4)
+            print('Produto adicionado com sucesso.')
+
+
     if opcao == 2:
-        print("bloco 2. CONSULTA POR CODIGO")
+        print("========== CONSULTA POR CODIGO ==========")
+
+
+
+        
     if opcao == 3: 
         print("Bloco 3. consultar todos os produtos")
     else:

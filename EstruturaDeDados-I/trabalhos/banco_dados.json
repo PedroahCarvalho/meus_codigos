@@ -1,1 +1,26 @@
-{}
+{
+    "lar123": {
+        "nome": "laranja",
+        "quantidade": 50,
+        "preco": "7.5",
+        "disponibilidade": 50
+    },
+    "pes123": {
+        "nome": "pesego",
+        "quantidade": 50,
+        "preco": "8.5",
+        "disponibilidade": 50
+    },
+    "per123": {
+        "nome": "pera",
+        "quantidade": 200,
+        "preco": "1.5",
+        "disponibilidade": 200
+    },
+    "uva123": {
+        "nome": "uva",
+        "quantidade": 75,
+        "preco": "12.5",
+        "disponibilidade": true
+    }
+}
