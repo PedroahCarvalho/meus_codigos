@@ -43,7 +43,7 @@ while opcao != 7:
         print("========== Caldastro de produtos ==========")
         codigo = input("Incira o codigo do produto: ")
         if codigo in bancoDados.keys():
-            print("Codigo ja existe ")
+            print("Codigo ja existente ")
         else:
             nome = input("Digite o nome do produto: ")
             quantidade = int(input("Digite a quantidade do produto: "))
@@ -61,14 +61,36 @@ while opcao != 7:
             print('Produto adicionado com sucesso.')
 
 
-    if opcao == 2:
+    elif opcao == 2:
         print("========== CONSULTA POR CODIGO ==========")
+        codigo = input('Digite o codigo do produto: ')
+        if codigo in bancoDados.keys():
+            produto = bancoDados[codigo]
+            print(f'Codigo: {codigo} | Produto: {produto["nome"]} | Quantidade: {produto["quantidade"]} | Preço: {produto["preco"]}')
+            #print(bancoDados) 
+        else:
+            print("ERRO, Codigo não encontrado.")
+
+
+    elif opcao == 3: 
+        print("========== PRODUTOS CADASTRADOS ==========")
+        for i in bancoDados:
+            produto = bancoDados[i]
+            print(f'Codigo: {i} | Produto: {produto["nome"]} | Quantidade: {produto["quantidade"]} | Preço: {produto["preco"]}')
+    
+
+    elif opcao == 4:
+        print("========== ALTERAR PREÇOS ==========")
+        codigo
 
 
 
-        
-    if opcao == 3: 
-        print("Bloco 3. consultar todos os produtos")
+
+
+
+
+
+
     else:
         
         print("ERRO, Opção invalida!")
