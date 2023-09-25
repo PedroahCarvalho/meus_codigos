@@ -5,8 +5,14 @@
 var ola_mundo="ola maundo!!!"
 console.log(ola_mundo)
 
-function (){
+function nome03(){
+    console.log(nome02)
 }
 
+let Nome01= "Pedro"
+console.log(Nome01)
+
+const nome02="Codigo do pedro"
+console.log(nome02)
 
 
