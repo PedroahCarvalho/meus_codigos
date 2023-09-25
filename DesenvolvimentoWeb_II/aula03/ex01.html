@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <title>loja iphone</title>
+    </head>
+    <body>
+        <main>
+            <div class="blocoPrincipal" id="blocoPrincipal">
+                <div class="imagen">
+                    <img src="imgens/iphone-image.jpg" alt="" class=""><br>
+                </div>
+                
+                <div class="letras">Iphone 13 Apple Pro Max 128Gb Rose</div><br>
+                <div>
+                    Valor:
+                    <span id="indentificador" style="font-weight: bold;">
+                    $ 1000.00 
+                    </span>
+                </div>
+                <div class="" id="juros">
+                    juros
+                </div>
+                <div class="letras">Fast Shop</div>
+
+            </div>
+        </main>
+
+        <script>
+            var valor = 1000;
+            var reais  = valor * 5.4;
+            var tag = document.getElementById("indentificador");    // .getElementById("indentificador") essa função pega o id ta tag HTML 
+            tag.innerHTML = "R$ " + reais.toFixed(2);          // tag.innerHTML essas funções são oque trocam o conteudo da tag, Ex: = "R$" + reais.toFixed(2);
+            
+            //toFixed(2); duas casa depois da virgula 
+            /*
+            calcule e mostre o preço do produto em reias
+            dividido em 6 parcelas acresentando 10% de juros (mostre o valor total e o0 valor de cada parcela)
+            mostre tambem o preço em 24x acrecentando 25% de juros ( mostro o valor total e o valor de cada parcela)
+            */
+            var parcelaReais6x = (reais / 60) * 0.1;
+            var jurosTodal6x = reais * 0.1;
+            var total6x = reais + jurosTodal6x;
+
+            var parcelaReais24x = (reais / 24) * 0.25;
+            var jurosTotal24x = reais * 0.25;
+            var toatl24x = reais + jurosTotal24x;
+
+            var saidaJuros = document.getElementById("juros");
+            saidaJuros.innerHTML = "6x de " + parcelaReais6x.toFixed(2) + " total " + total6x + " ou em 24x de " + parcelaReais24x.toFixed(2) + " Total de R$ " + toatl24x;
+
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Exercios javascript</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <div class="ex">
+                <h1>Calculo de troco</h1>
+                <br>
+                <label for="ValorCompra">Valor da compra</label><br>
+                <input type="number" name="ValorCompra" id="valorCompra">
+                <br><br>
+
+                <label for="valorRecebido">Valor recebido</label><br>
+                <input type="number" name="valorRecebido" id="valorRecebido">
+                <br><br>
+                
+                <input type="button" value="calcular" onclick="CalculoTroco()">
+                <br><br>
+
+                <div id="resp01"></div>
+            </div>
+            <div class="ex">
+                <h1>Media de voltas</h1>
+                <br>
+                <label for="vol01">incira o tempo da 1° volta.</label><br>
+                <input type="number" name="vol01" id="vol01">
+                <br><br>
+
+                <label for="vol02">incira o tempo da 2° volta.</label><br>
+                <input type="number" name="vol02" id="vol02">
+                <br><br>
+                
+                <label for="vol03">incira o tempo da 3° volta.</label><br>
+                <input type="number" name="vol03" id="vol03">
+                <br><br>
+
+                <input type="button" value="calcular" onclick="calVoltas()">
+                <br>
+                <div id="resp02"></div>
+            
+
+            </div>
+        </main>
+        
+
+        <script>
+            //1 - Deseja-se criar um sistema para calcular o valor de troco para um caixa de uma loja, ondeo usuário irá digitar o valor total da compra e o valor pago pelo cliente.
+
+        function CalculoTroco(){
+            var valor01 = document.getElementById("valorCompra");
+            var valor02 = document.getElementById("valorRecebido");
+            var respEx01 = document.getElementById("resp01");
+            var v01 = parseFloat(valor01.value);
+            var v02 = parseFloat(valor02.value);
+            var process = (v02 - v01);
+            respEx01.innerHTML = "valor do troco: R$ " + process.toFixed(2);
+        }
+
+            //             2 - Em uma corrida automobilística, o grid de largada é determinado pelo tempo médio emque o piloto leva para efetuar cada volta no circuito. Considerando que o piloto fará 3 voltas, mostre o tempo total gasto e a média de tempo entre as voltas.
+
+            function calVoltas(){
+
+                var vol01 = document.getElementById("vol01");
+                var vol02 = document.getElementById("vol03");
+                var vol03 = document.getElementById("vol03");
+                var resp02 = document.getElementById("resp02");
+                var vol01c = parseFloat(vol01.value);
+                var vol02c = parseFloat(vol02.value);
+                var vol03c = parseFloat(vol03.value);
+                var CalVoltas = (vol01c + vol02c+ vol03c) / 3;
+                resp02.innerHTML = "O a media de tempo entre as voltas é : "+ CalVoltas;
+            }
+
+            // 3 - Uma nutricionista está tendo dificuldade em calcular o peso ideal de seus pacientes. Parasolucionar este problema vamos desenvolver um programa que receba a altura do paciente, emostre o seu peso ideal utilizando a seguinte equação:
+            // (Altura*Altura) * 25
+
+            // 4 – Faça um sistema para calcular o valor a ser pago por um boleto de cobrança atrasado. Para isso, peça para o usuário digitar o valor do boleto e a quantidade de dias de atraso. Deverá ser calculado 2% de multa de atraso, R$ 2,00 de despesa de cobrança e também0,5%de juros ao dia.
+             5 – O tempo de gestação normalmente é calculado em semanas. Portanto, faça umalgoritmoque peça para o usuário digitar a quantidade de semanas e mostre qual é a quantidade demeses e a quantidade de dias. Considere para este cálculo que todos os meses possuem30dias. Exemplo: 25 semanas = 25*7 = 175dias 175/30 = 5.8 meses. 
+             6 - considere que um carro faz 9km/litro de consumo com alcool. Já na gasolina ele faz
+            // 11km/litro. Faça um algoritmo em que o usuário irá digitar a distância que deseja viajar, opreço do alcool e o preço do litro da gasolina. Calcule e mostre o valor que será gasto casoabasteça com alcool e o valor gasto com gasolina. 7 - O custo ao consumidor de um carro novo é a soma do custo de fábrica com a porcentagemdo distribuidor e dos impostos (aplicados, primeiro os impostos sobre o custo de fábrica, edepois a porcentagem do distribuidor sobre o resultado). Supondo que a porcentagemdo
+            // distribuidor seja de 28% e os impostos 45%. Escrever um algoritmo que leia o custo de fábricade um carro e informe o custo ao consumidor do mesmo.
+        </script>
+    </body>
+</html>

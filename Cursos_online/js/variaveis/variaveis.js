@@ -5,8 +5,7 @@
 var ola_mundo="ola maundo!!!"
 console.log(ola_mundo)
 
-function nome03(){
-    console.log(nome02)
+function (){
 }
 
 let Nome01= "Pedro"
@@ -16,3 +15,4 @@ const nome02="Codigo do pedro"
 console.log(nome02)
 
 
+>>>>>>> cdd1e03074bea6f8960fb499d31afaf94feac04a:Cursos_online/js/variaveis/variaveis.js
