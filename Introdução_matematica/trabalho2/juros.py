@@ -22,5 +22,8 @@ while opcao != 6:
         montante = capital + juros
         
 
-
+def jurosSimple(capital, taxaJuros, tempo)
+        #j = c * i * t
+        juros = capital * taxaJuros * tempo
+        return juros
     
