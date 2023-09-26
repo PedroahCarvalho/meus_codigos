@@ -35,7 +35,8 @@ while opcao != 7:
     tmp = {}
     if opcao == 1:
         print("========== Caldastro de produtos ==========")
-        codigo = input("Insira o codigo do produto: ")
+        cod = input("Insira o codigo do produto: ")
+        codigo = cod.strip()
         if codigo in bancoDados.keys():
             print("Codigo ja existe ")
         else:
@@ -54,13 +55,14 @@ while opcao != 7:
                 json.dump(bancoDados, arquivo, indent=4)
             print('Produto adicionado com sucesso.')
 
+    #bloco que faz consulta por codigo
     elif opcao == 2:
         print("========== CONSULTA POR CODIGO ==========")
         codigo = input('Digite o codigo do produto: ')
-        if codigo in bancoDados.keys():
+        if codigo in bancoDados.keys(): #vericindo se protuto consta na base de dados.
             produto = bancoDados[codigo]
+            #imprimindo produto selecionado. 
             print(f'Codigo: {codigo} | Produto: {produto["nome"]} | Quantidade: {produto["quantidade"]} | Preço: {produto["preco"]}')
-            #print(bancoDados) 
         else:
             print("ERRO, Codigo não encontrado.")
 
@@ -92,7 +94,7 @@ while opcao != 7:
         opcaoInterna = int(input('insira sua opção: '))
         if opcaoInterna == 1:
             print("========== ACRECIMO ==========")
-            acrecimo = int(input("Digite de quantos porcento sera o acrecimo:"))
+            acrecimo = int(input("Digite de quantos porcento sera o acrecimo: "))
             decimal = acrecimo /100
             for i in bancoDados.keys():
                 produto = bancoDados[i]
@@ -104,28 +106,35 @@ while opcao != 7:
                     json.dump(bancoDados, arquivo, indent=4)
             print('Preços modificados com sucesso.')
             #DESCONTO
-            if opcaoInterna == 2:
-                print("========== DESCONTO ==========")
-                acrecimo = int(input("Digite de quantos porcento sera o acrecimo:"))
-                decimal = acrecimo /100
-                for i in bancoDados.keys():
-                    produto = bancoDados[i]
-                    preco = produto['preco']
-                    porcento = preco * decimal
-                    valorFinal = preco - porcento
-                    print(valorFinal)
-                    with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
-                        json.dump(bancoDados, arquivo, indent=4)
-                print('Preços modificados com sucesso.')
-            else:
-                print()
-                
-                
+        elif opcaoInterna == 2:
+            print("========== DESCONTO ==========")
+            acrecimo = int(input("Digite de quantos porcento sera o acrecimo:"))
+            decimal = acrecimo /100
+            for i in bancoDados.keys():
+                produto = bancoDados[i]
+                preco = produto['preco']
+                porcento = preco * decimal
+                valorFinal = preco - porcento
+                print(valorFinal)
+                with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
+                    json.dump(bancoDados, arquivo, indent=4)
+            print('Preços modificados com sucesso.')
 
+        else:
+            print("ERRO, opção invaida.")
 
-            
+    elif opcao == 6:
+        print("========== EXCLUIR PRODUTOS ========== ")
+        chave = input("Digite o codigo do produto a ser excluido: ")
+        if chave.strip() in bancoDados.keys():
+            bancoDados.pop(chave)
+            with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
+                json.dump(bancoDados, arquivo, indent=4)
+            print("Produto excluido com sucesso.")
+        else:
+            print('ERRO, produto não existente.')
 
-            
     else:
         
         print("ERRO, Opção invalida!")
+        
