@@ -2,12 +2,6 @@
 import json
 import os
 
-# funçoes
-def gravar(arc):
-    with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'a') as arquivo:
-        json.dump(arc, arquivo, indent=4)
-
-
 
 # Verificando, inciando ou carregando arquivos importentes para o programa.
 bancoDados = {}
@@ -41,7 +35,7 @@ while opcao != 7:
     tmp = {}
     if opcao == 1:
         print("========== Caldastro de produtos ==========")
-        codigo = input("Incira o codigo do produto: ")
+        codigo = input("Insira o codigo do produto: ")
         if codigo in bancoDados.keys():
             print("Codigo ja existe ")
         else:
@@ -60,7 +54,6 @@ while opcao != 7:
                 json.dump(bancoDados, arquivo, indent=4)
             print('Produto adicionado com sucesso.')
 
-
     elif opcao == 2:
         print("========== CONSULTA POR CODIGO ==========")
         codigo = input('Digite o codigo do produto: ')
@@ -71,25 +64,68 @@ while opcao != 7:
         else:
             print("ERRO, Codigo não encontrado.")
 
-
     elif opcao == 3: 
         print("========== PRODUTOS CADASTRADOS ==========")
         for i in bancoDados:
             produto = bancoDados[i]
             print(f'Codigo: {i} | Produto: {produto["nome"]} | Quantidade: {produto["quantidade"]} | Preço: {produto["preco"]}')
     
-
     elif opcao == 4:
-        print("bloco 4")
+        print("========== ALTERAÇÃO DE TEXTOS ==========")
+        codigo = input('Digite o codigo que de deseja alterar: ')
+        if codigo in bancoDados.keys():
+            produto = bancoDados[codigo]
+            print(f"O produto selecionado é {produto['nome']} e preço atual é de R${produto['preco']}.")
+            novoPreco = float(input("Insira o preço desejado: "))
+            produto['preco'] = novoPreco
+            with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
+                json.dump(bancoDados, arquivo, indent=4)
+            print('Preço alterado com sucesso.')
+        else:
+            print('ERRO, Codigo não encontrado')
+        
+    elif opcao ==5 :
+        opcaoInterna = 0
+        print('========== ACRECIMO OU DECRECIMO DE PREÇO ==========')
+        print('1 - Acrecimo.')
+        print('2 - Decrecimo.')
+        opcaoInterna = int(input('insira sua opção: '))
+        if opcaoInterna == 1:
+            print("========== ACRECIMO ==========")
+            acrecimo = int(input("Digite de quantos porcento sera o acrecimo:"))
+            decimal = acrecimo /100
+            for i in bancoDados.keys():
+                produto = bancoDados[i]
+                preco = produto['preco']
+                porcento = preco * decimal
+                valorFinal = preco + porcento
+                print(valorFinal)
+                with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
+                    json.dump(bancoDados, arquivo, indent=4)
+            print('Preços modificados com sucesso.')
+            #DESCONTO
+            if opcaoInterna == 2:
+                print("========== DESCONTO ==========")
+                acrecimo = int(input("Digite de quantos porcento sera o acrecimo:"))
+                decimal = acrecimo /100
+                for i in bancoDados.keys():
+                    produto = bancoDados[i]
+                    preco = produto['preco']
+                    porcento = preco * decimal
+                    valorFinal = preco - porcento
+                    print(valorFinal)
+                    with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
+                        json.dump(bancoDados, arquivo, indent=4)
+                print('Preços modificados com sucesso.')
+            else:
+                print()
+                
+                
 
 
+            
 
-
-
-
-
-
-
+            
     else:
         
         print("ERRO, Opção invalida!")
