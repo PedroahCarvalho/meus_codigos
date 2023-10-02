@@ -99,8 +99,9 @@ while opcao != 7:
             for i in bancoDados.keys():
                 produto = bancoDados[i]
                 preco = produto['preco']
+                preco = float(preco)
                 porcento = preco * decimal
-                valorFinal = preco + porcento
+                valorFinal = preco+ porcento
                 print(valorFinal)
                 with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
                     json.dump(bancoDados, arquivo, indent=4)
@@ -113,7 +114,7 @@ while opcao != 7:
             for i in bancoDados.keys():
                 produto = bancoDados[i]
                 preco = produto['preco']
-                porcento = preco * decimal
+                porcento = float(preco) * decimal
                 valorFinal = preco - porcento
                 print(valorFinal)
                 with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'w') as arquivo:
