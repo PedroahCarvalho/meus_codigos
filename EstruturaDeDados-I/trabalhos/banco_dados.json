@@ -22,11 +22,5 @@
         "quantidade": 75,
         "preco": "12.5",
         "disponibilidade": true
-    },
-    "goi123": {
-        "nome": "goiaba",
-        "quantidade": 12,
-        "preco": "5.0",
-        "disponibilidade": true
     }
 }

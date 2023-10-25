@@ -2,12 +2,6 @@
 import json
 import os
 
-# funçoes
-def gravar(arc):
-    with open('EstruturaDeDados-I/trabalhos/banco_dados.json', 'a') as arquivo:
-        json.dump(arc, arquivo, indent=4)
-
-
 
 # Verificando, inciando ou carregando arquivos importentes para o programa.
 bancoDados = {}
@@ -41,7 +35,8 @@ while opcao != 7:
     tmp = {}
     if opcao == 1:
         print("========== Caldastro de produtos ==========")
-        codigo = input("Incira o codigo do produto: ")
+        cod = input("Insira o codigo do produto: ")
+        codigo = cod.strip()
         if codigo in bancoDados.keys():
             print("Codigo ja existente ")
         else:
@@ -61,36 +56,15 @@ while opcao != 7:
             print('Produto adicionado com sucesso.')
 
 
-    elif opcao == 2:
+    if opcao == 2:
         print("========== CONSULTA POR CODIGO ==========")
-        codigo = input('Digite o codigo do produto: ')
-        if codigo in bancoDados.keys():
-            produto = bancoDados[codigo]
-            print(f'Codigo: {codigo} | Produto: {produto["nome"]} | Quantidade: {produto["quantidade"]} | Preço: {produto["preco"]}')
-            #print(bancoDados) 
-        else:
-            print("ERRO, Codigo não encontrado.")
-
-
-    elif opcao == 3: 
-        print("========== PRODUTOS CADASTRADOS ==========")
-        for i in bancoDados:
-            produto = bancoDados[i]
-            print(f'Codigo: {i} | Produto: {produto["nome"]} | Quantidade: {produto["quantidade"]} | Preço: {produto["preco"]}')
-    
-
-    elif opcao == 4:
-        print("========== ALTERAR PREÇOS ==========")
-        codigo
 
 
 
-
-
-
-
-
-
+        
+    if opcao == 3: 
+        print("Bloco 3. consultar todos os produtos")
     else:
         
         print("ERRO, Opção invalida!")
+        
