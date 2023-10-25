@@ -10,5 +10,10 @@ while opcao != 3:
     print('2 - Consultar cadastro')
     print('3 - Sair do programa')
     opcao = input('>>>> ')
-    if opcao == 1:
+    if opcao == 1: 
+        matricula = input('Digite a matricula')
+        nome = input('Digite o nome do aluno:')
+        idade = input('Digite a idade do aluno: ')
+        nota = input("digite as notas:")
+        cadastroAlunos = [matricula]
         
