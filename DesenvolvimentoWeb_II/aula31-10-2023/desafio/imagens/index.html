@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loja de roupas</title>
+</head>
+<body>
+    <img src="imagens/camiseta-preta-frente.webp" id="camisetas" width="300">
+    <br><br>
+    <input type="button" value="frente" onclick="frente()">
+    <input type="button" valeu="costas" onclick="costas()">
+
+
+    <script>
+        function frente(){
+            var c = document.getElementById("camisetas");
+            c.src = "camiseta-preta-frente.webp";
+
+        }
+        function costas(){
+            var c = document.getElementById("camisetas");
+            c.src = "camiseta-preta-costas.webp";
+
+        }
+
+
+    </script>
+</body>
+</html>
