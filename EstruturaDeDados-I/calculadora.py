@@ -76,6 +76,8 @@ while True:
     elif opcao == 6:
         print('Saindo do programa')
         break
+    else:
+        print('erro--opção invalida')
 
 
     
