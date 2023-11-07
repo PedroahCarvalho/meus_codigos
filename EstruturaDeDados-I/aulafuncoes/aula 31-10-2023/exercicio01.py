@@ -1,0 +1,3 @@
+def possibilidades(n,m);
+    
+    
