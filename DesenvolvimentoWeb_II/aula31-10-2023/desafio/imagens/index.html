@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loja de roupas</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: inline-block;
+        }
+        img{
+            width: 300px;
+        }
         .botao{
             width: 10px;
             height: 10px;
             cursor: pointer;
-            display: inline-block;
+            display: flex;
+            margin: 25px;
         }
         .preta{
             background-color: black;
@@ -17,18 +28,28 @@
         .azul{
             background-color: blue;
         }
+        .quadrado{
+            width: 50%;
+        }
     </style>
 </head>
 <body>
-    <input type="button" value="frente" onclick="imagem1()">
-    <img src="imagens/camiseta-preta-frente.webp" id="camisetas" width="300">
-    <input type="button" valeu="costas" onclick="imagem2()">
-    <br><br>
+    <div class="esquerdo quadrado">
+        <input type="button" value="<" onclick="imagem1()">
+        <img src="preta1.webp" id="camisetas" width="300">
+        <input type="button" valeu=">" onclick="imagem2()">
+        <br><br>
 
-    <div onclick="azul()" class="azul botao">azul</div>
-    <div onclick="preta()" class="preta botao">preta</div>
+        <div onclick="azul()" class="azul botao">azul</div>
+        <div onclick="preta()" class="preta botao">preta</div>
 
-    <div id="resp" ></div><br><br>
+        <div id="resp" ></div><br><br>
+    </div>
+    <div class="direito quadrado">
+        <img src="preta1.webp" onclick="camiseta()">
+        <img src="bremudabranca1.webp" onclick="bermuda()">
+
+    </div>
 
     
 
@@ -37,11 +58,13 @@
         function imagem1(){
             var image = document.getElementById("camisetas");
             var resp = document.getElementById("resp");
+
             if(image.src.includes("preta2.webp")){
-                image.src="preta1.web";
+                image.src="preta1.webp";
             }else if(image.src.includes("azul2.webp")){
                 image.src= "azul1.webp"
             }
+
             
         }
         function imagem2(){
@@ -55,13 +78,12 @@
             }
         }
         function azul(){
-            var image = document.getElementById("camiseta");
+            var image = document.getElementById("camisetas");
             image.src = "azul1.webp";
         }
         function preta(){
-            var imagem = document.getElementById("camiseta");
-            imagem.src = "camiseta-preta-frente.webp";
-
+            var imagem = document.getElementById("camisetas");
+            imagem.src = "preta1.webp";
         }
 
 
