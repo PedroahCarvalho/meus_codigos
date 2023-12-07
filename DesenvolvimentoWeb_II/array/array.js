@@ -39,10 +39,13 @@ function listar(){
     }
 
 }
+
 function excluir(i){
     itens.splice(i,1);
     listar();
 }
+
+
 function salvar(){
     //converte os dados em uma String JSON
     var dados = JSON.stringify(itens);
@@ -50,6 +53,7 @@ function salvar(){
     //salvar os dados no localstorage
     localStorage.setItem("dados" , dados);
 }
+
 function abrir(){
     //lê os dados do localStorage
     var dados = localStorage.getItem("dados");
