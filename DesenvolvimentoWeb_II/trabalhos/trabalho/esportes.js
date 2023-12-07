@@ -1,8 +1,8 @@
-var cursos = []; // Array para armazenar cursos
+var esporte = []; // Array para armazenar esporte
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Carregar cursos salvos ao iniciar a página
-    abrirCursos();
+    // Carregar esporte salvos ao iniciar a página
+    abrirEsportes();
 });
 
 function inserirEsporte() {
@@ -20,21 +20,22 @@ function inserirEsporte() {
         descricao: descriçãoJogo
     };
 
-    cursos.push(treino);
+    esporte.push(treino);
+    salvarEsportes()
 
     // Limpar campos de entrada
     limparCampos();
 
-    // Atualizar tabela de cursos
+    // Atualizar tabela de esporte
     listarEsporte();
 }
 
 function listarEsporte() {
-    var tabelaCursos = document.getElementById('tabelaCursos');
-    tabelaCursos.innerHTML = ''; // Limpar tabela
+    var tabelaEsporte = document.getElementById('tabelaEsporte');
+    tabelaEsporte.innerHTML = ''; // Limpar tabela
 
     // Cabeçalho da tabela
-    var cabecalho = tabelaCursos.insertRow();
+    var cabecalho = tabelaEsporte.insertRow();
     cabecalho.insertCell(0).textContent = 'Nome do esporte';
     cabecalho.insertCell(1).textContent = 'Preço do campo';
     cabecalho.insertCell(2).textContent = 'Duração do jogo';
@@ -42,14 +43,14 @@ function listarEsporte() {
     cabecalho.insertCell(4).textContent = 'Descrição';
     cabecalho.insertCell(5).textContent = 'Ação'; // Nova coluna para o botão de exclusão
 
-    // Adicionar cursos à tabela
-    for (var i = 0; i < cursos.length; i++) {
-        var linha = tabelaCursos.insertRow();
-        linha.insertCell(0).textContent = cursos[i].nome;
-        linha.insertCell(1).textContent = cursos[i].preco;
-        linha.insertCell(2).textContent = cursos[i].duracao;
-        linha.insertCell(3).textContent = cursos[i].professor;
-        linha.insertCell(4).textContent = cursos[i].descricao;
+    // Adicionar esporte à tabela
+    for (var i = 0; i < esporte.length; i++) {
+        var linha = tabelaEsporte.insertRow();
+        linha.insertCell(0).textContent = esporte[i].nome;
+        linha.insertCell(1).textContent = esporte[i].preco;
+        linha.insertCell(2).textContent = esporte[i].duracao;
+        linha.insertCell(3).textContent = esporte[i].professor;
+        linha.insertCell(4).textContent = esporte[i].descricao;
 
         // Adicionar botão de exclusão
         var cellAcao = linha.insertCell(5);
@@ -62,12 +63,12 @@ function listarEsporte() {
 
 function criarFuncaoExcluir(indice) {
     return function () {
-        excluirCurso(indice);
+        excluirEsporte(indice);
     };
 }
 
-function excluirCurso(indice) {
-    cursos.splice(indice, 1);
+function excluirEsporte(indice) {
+    esporte.splice(indice, 1);
     listarEsporte();
 }
 
@@ -79,16 +80,16 @@ function limparCampos() {
     document.getElementById('descriçãoJogo').value = '';
 }
 
-function salvarCursos() {
-    // Salvar cursos no localStorage
-    localStorage.setItem('cursos', JSON.stringify(cursos));
+function salvarEsportes() {
+    // Salvar esporte no localStorage
+    localStorage.setItem('esporte', JSON.stringify(esporte));
 }
 
-function abrirCursos() {
-    // Recuperar cursos do localStorage ao iniciar a página
-    var cursosSalvos = localStorage.getItem('cursos');
-    if (cursosSalvos) {
-        cursos = JSON.parse(cursosSalvos);
+function abrirEsportes() {
+    // Recuperar esporte do localStorage ao iniciar a página
+    var esporteSalvo = localStorage.getItem('esporte');
+    if (esporteSalvo) {
+        esporte = JSON.parse(esporteSalvo);
         listarEsporte();
     }
 }
