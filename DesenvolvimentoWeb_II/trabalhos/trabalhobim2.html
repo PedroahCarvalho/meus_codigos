@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+</head>
+<body>
+    <h1>Gestão de Cursos</h1>
+
+    <label for="nomeEsporte">Nome esporte</label>
+    <input type="text" id="nomeEsporte"/>
+
+    <label for="quantidadeJogadores">quantidade de jogadores</label>
+    <input type="number" id="quantidadeJogadores"/>
+
+    <label for="dataJogo">data do jogo:</label>
+    <input type="date" id="duracaoCurso"/>
+
+    <label for="nomeTreinador">Nome do treinador</label>
+    <input type="text" id="nomeTreinador"/>
+
+    <label for="quadra">quadra</label>
+    <textarea id="quadra"></textarea>
+
+    <button type="button" onclick="inserirEsporte()">Inserir esporte</button>
+    <button type="button" onclick="listarEsporte()">Listar esporte</button>
+
+    <br>
+
+    <table border="1" width="100%" id="tabelaEsportes"></table>
+
+    <script src="cursos.js"></script>
+</body>
+</html>

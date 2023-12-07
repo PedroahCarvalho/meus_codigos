@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extrato Bancário</title>
+</head>
+<body>
+  <h1>Extrato Bancário</h1>
+
+  <form id="formExtrato">
+    <label for="data">Data da transação:</label>
+    <input type="date" id="data" required><br>
+
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" required><br>
+
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" required><br>
+
+    <label for="saldo">Saldo:</label>
+    <input type="number" id="saldo" required><br>
+
+    <label for="conta">Número da conta:</label>
+    <input type="text" id="conta" required><br>
+
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <h2>Lista de Transações</h2>
+  <ul id="listaTransacoes"></ul>
+
+  <script>
+    const formExtrato = document.getElementById('formExtrato');
+    const listaTransacoes = document.getElementById('listaTransacoes');
+
+    formExtrato.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const data = document.getElementById('data').value;
+      const descricao = document.getElementById('descricao').value;
+      const valor = document.getElementById('valor').value;
+      const saldo = document.getElementById('saldo').value;
+      const conta = document.getElementById('conta').value;
+
+      const transacao = {
+        data: data,
+        descricao: descricao,
+        valor: valor,
+        saldo: saldo,
+        conta: conta
+      };
+
+      localStorage.setItem('transacao-' + Date.now(), JSON.stringify(transacao));
+
+      listarTransacoes();
+      formExtrato.reset();
+    });
+
+    function listarTransacoes() {
+      listaTransacoes.innerHTML = '';
+
+      for (let chave in localStorage) {
+        if (chave.startsWith('transacao-')) {
+          const transacao = JSON.parse(localStorage.getItem(chave));
+          const itemLista = document.createElement('li');
+          itemLista.textContent = ${transacao.data} - ${transacao.descricao} - ${transacao.valor} - ${transacao.saldo} - ${transacao.conta};
+          listaTransacoes.appendChild(itemLista);
+        }
+      }
+    }
+
+    listarTransacoes();
+
+    listaTransacoes.addEventListener('click', function(e) {
+      if (e.target.tagName === 'LI') {
+        const chave = 'transacao-' + e.target.textContent.split(' - ')[0];
+        localStorage.removeItem(chave);
+        listarTransacoes();
+      }
+    });
+  </script>
+</body>
