@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+</head>
+<body>
+    <h1>Gestão de jogos esportivos: treinos</h1>
+
+    <label for="nomeEsporte">Nome do esporte:</label>
+    <input type="text" id="nomeEsporte"/>
+
+    <label for="aluguelCampo">Preço do aluguel do campo:</label>
+    <input type="number" id="aluguelCampo"/>
+
+    <label for="duraçãoJogo">Tempo de jogo:</label>
+    <input type="text" id="duraçãoJogo"/>
+
+    <label for="professorjogo">Nome do Professor:</label>
+    <input type="text" id="professorjogo"/>
+
+    <label for="descriçãoJogo">Descrição do jogo:</label>
+    <textarea id="descriçãoJogo"></textarea>
+
+    <button type="button" onclick="inserirEsporte()">Inserir treino</button>
+    <button type="button" onclick="listarEsporte()">Listar treino</button>
+
+    <br>
+
+    <table border="1" width="100%" id="tabelaEsporte"></table>
+
+    <script src="esportes.js"></script>
+</body>
+</html>
