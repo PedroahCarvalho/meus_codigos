@@ -5,40 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loja de roupas</title>
     <style>
-        body{
-            display: flex;
-        }
         .botao{
             width: 50px;
             height: 20px;
             cursor: pointer;
             display: inline-block;
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-
-        }
-        .b-cor{
-            display: inline;
-            justify-content: space-between;
         }
         .preta{
             background-color: black;
         }
         .azul{
             background-color: blue;
-        }
-        .imagem{
-            display: inline-block;
-        }
-
-        /* shortes */
-        .shorte{
-            margin: 0px 15px 0px 15px;
-        }
-        .shorte-image{
-            width: 100px;
-            border-radius: 5px;       
         }
     </style>
 </head>
@@ -52,6 +29,9 @@
             <div onclick="azul()" class="azul botao">azul</div>
             <div onclick="preta()" class="preta botao">preta</div>
         </div>
+
+            
+
         <div id="resp" ></div><br><br>
     </div>
     <div class="shorte">
@@ -59,11 +39,13 @@
         <img src="preto-shorte1.webp" class="shorte-image" onclick="shorte(), opcshorte()">
         <h2>camisetas</h2>
         <img src="preta1.webp" class="shorte-image" onclick="camiseta(), opccamiseta()">
+
     </div>
     <script>
         function imagem1(){
             var image = document.getElementById("camisetas");
             var resp = document.getElementById("resp");
+
             if(image.src.includes("preta2.webp")){
                 image.src="preta1.webp";
             }else if(image.src.includes("azul2.webp")){
@@ -73,6 +55,7 @@
             }else if(image.src.includes("azul-shorte2.webp")){
                 image.src="azul-shorte1.webp";
             }
+            
         }
         function imagem2(){
             var image = document.getElementById("camisetas");
@@ -107,26 +90,12 @@
             image.src = "azul1.webp";
         }
         function preta(){
-            var imagem = document.getElementById("camisetas");
-            imagem.src = "preta1.webp";
+            var imagem = document.getElementById("camiseta");
+            imagem.src = "camiseta-preta-frente.webp";
 
         }
-        function shorteazul(){
-            var image = document.getElementById("camisetas");
-            image.src = "azul-shorte1.webp";
-        }
-        function shortepreto(){
-            var image = document.getElementById("camisetas");
-            image.src = "preto-shorte1.webp";
-        }
-        function shorte(){
-            var image = document.getElementById("camisetas");
-            image.src="preto-shorte1.webp"
-        }
-        function camiseta(){
-            var image = document.getElementById("camisetas");
-            image.src="preta1.webp";
-        }
+
+
     </script>
 </body>
 </html>

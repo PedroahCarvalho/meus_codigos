@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Gestão de Cursos e Esportes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestão de Cursos e Esportes</h1>
+
+    <div id="esporteDiv">
+        <label for="nomeEsporte">Nome do Esporte:</label>
+        <input type="text" id="nomeEsporte"/>
+        <label for="precoEsporte">Preço:</label>
+        <input type="number" id="precoEsporte"/>
+        <label for="duracaoEsporte">Tempo de Duração:</label>
+        <input type="text" id="duracaoEsporte"/>
+        <label for="professorEsporte">Nome do Professor:</label>
+        <input type="text" id="professorEsporte"/>
+        <label for="descricaoEsporte">Descrição do Esporte:</label>
+        <textarea id="descricaoEsporte"></textarea>
+        <button type="button" onclick="inserirEsporte()">Inserir Esporte</button>
+        <button type="button" onclick="listarEsportes()">Listar Esportes</button>
+    </div>
+
+    <table border="1" width="100%" id="tabelaCursosEsportes"></table>
+
+    <script src="script.js"></script>
+</body>
+</html>

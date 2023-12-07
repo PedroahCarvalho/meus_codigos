@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+</head>
+<body>
+    <h1>Gestão de Cursos</h1>
+
+    <label for="nomeCurso">Nome do Curso:</label>
+    <input type="text" id="nomeCurso"/>
+
+    <label for="precoCurso">Preço:</label>
+    <input type="number" id="precoCurso"/>
+
+    <label for="duracaoCurso">Tempo de Duração:</label>
+    <input type="text" id="duracaoCurso"/>
+
+    <label for="professorCurso">Nome do Professor:</label>
+    <input type="text" id="professorCurso"/>
+
+    <label for="descricaoCurso">Descrição do Curso:</label>
+    <textarea id="descricaoCurso"></textarea>
+
+    <button type="button" onclick="inserirCurso()">Inserir Curso</button>
+    <button type="button" onclick="listarCursos()">Listar Cursos</button>
+
+    <br>
+
+    <table border="1" width="100%" id="tabelaCursos"></table>
+
+    <script src="cursos.js"></script>
+</body>
+</html>
