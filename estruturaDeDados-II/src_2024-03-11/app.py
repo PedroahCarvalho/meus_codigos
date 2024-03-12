@@ -1,5 +1,5 @@
 from flask import Flask, request
-from ibge import busca, calcula_ocorencias
+from ibge import busca, calcula_ocorencias ,calcular_maxima
 
 app = Flask(__name__)
 
@@ -33,5 +33,21 @@ def buscar_nome():
         return objeto_retorno
     except Exception as e:
         return f"Falha na rota /busca_nome: {e}"
+    
+@app.route("/maxima")
+def buscar_maxima():
+    try:
+        nome = request.args.get("nome")
+        response = busca(nome)
+        soma = calcular_maxima(response)
+        print(soma)
+        objeto_retorno = {
+            "nome_procurado": nome,
+            "preiodo de maior ocorrecia": soma
+        }
+        return objeto_retorno
+    except Exception as e:
+        return f"Falha na rota /busca_nome: {e}"
+
 
 app.run(debug=True)
